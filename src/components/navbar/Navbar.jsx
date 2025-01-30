@@ -1,58 +1,64 @@
-import Logo from '../../assets/Logo.png'
+import React from "react";
+import Logo from "../../assets/logo.png";
+import { motion } from "framer-motion";
 
 const NavLinks = [
   {
     id: 1,
     title: "About",
-    link: '#'
+    link: "#",
   },
   {
     id: 2,
     title: "Services",
-    link: '#'
+    link: "#",
   },
   {
     id: 3,
     title: "Project",
-    link: '#'
+    link: "#",
   },
   {
     id: 4,
     title: "Contact",
-    link: '#'
+    link: "#",
   },
-]
-export default function Navbar() {
+];
+const Navbar = () => {
   return (
     <>
-      <div className="container py-4 flex justify-between">
+      <motion.div
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="container py-6 flex justify-between items-center"
+      >
         {/* Logo section */}
-        <div className='flex items-center gap-3'>
-          <a href="/"><img src={Logo} alt="" className='w-10' /></a>
-          <span className='text-2xl fond-bold'>Interior</span>
+        <div className="flex items-center gap-3">
+          <img src={Logo} alt="logo" className="w-10" />
+          <span className="text-2xl font-bold">Interior</span>
         </div>
         {/* Link section */}
-        <div className='hidden md:block'>
-          {
-            NavLinks.map(data => {
-              return (
-                <a
-                  href={data.link}
-                  key={data.id}
-                  className='mx-4 text-sm font-semibold'
-                >
-                  {data.title}
-                </a>
-              )
-            })
-          }
+        <div className="hidden md:block !space-x-12">
+          {NavLinks.map((menu) => {
+            return (
+              <a
+                key={menu.id}
+                href={menu.link}
+                className="inline-block mx-4 text-lg font-semibold"
+              >
+                {menu.title}
+              </a>
+            );
+          })}
         </div>
         {/* Button section */}
         <div>
-          <button className='primary-btn'>Try For Free</button>
+          <button className="primary-btn">Try For Free</button>
         </div>
-      </div>
+      </motion.div>
     </>
-  )
-}
+  );
+};
 
+export default Navbar;
