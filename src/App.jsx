@@ -1,14 +1,27 @@
-import Brands from "./components/brands/Brands";
-import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
+import Hero from "./components/hero/Hero";
+import Brands from "./components/brands/Brands";
+import Services from "./components/services/Services";
+import Banner from "./components/banner/Banner";
+import Banner2 from "./components/banner/Banner2";
+import Testimonial from "./components/testimonial/Testimonial";
+import Newsletter from "./components/newsletter/Newsletter";
+import Footer from "./components/footer/Footer";
 
-
-export default function App() {
+const App = () => {
   return (
-    <div>
+    <main className="overflow-x-hidden">
       <Navbar />
       <Hero />
       <Brands />
-    </div>
-  )
-}
+      <Services />
+      <Banner />
+      <Banner2 />
+      <Testimonial />
+      <Newsletter />
+      <Footer />
+    </main>
+  );
+};
+
+export default App;
