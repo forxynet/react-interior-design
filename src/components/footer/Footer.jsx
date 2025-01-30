@@ -66,7 +66,7 @@ const Footer = () => {
             <ul className="text-base font-semibold space-y-4">
               <li className="flex items-center space-x-3">
                 <FaPhone />
-                <a href="#">+91 123456789</a>
+                <a href="#">+90 212 000 0000</a>
               </li>
               <li className="flex items-center space-x-3">
                 <LuMessageSquare />
@@ -78,7 +78,7 @@ const Footer = () => {
 
         {/* bottom section */}
         <p className="text-center text-sm font-semibold  border-t-2 pt-5 mt-5">
-          &copy; 2023 TCJ. All rights reserved
+          &copy; 2025 Dynamicq. All rights reserved
         </p>
       </div>
     </motion.footer>
