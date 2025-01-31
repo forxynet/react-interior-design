@@ -70,7 +70,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <LuMessageSquare />
-                <a href="mailto:contact.thecodingjourney@gmail.com">Email</a>
+                <a href="mailto:contact.info@gmail.com">Email</a>
               </li>
             </ul>
           </div>
